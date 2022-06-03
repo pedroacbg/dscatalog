@@ -4,7 +4,7 @@ import ProductCard from 'components/ProductCard';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from 'types/product';
-import { SpringPage } from 'types/vendor/Spring';
+import { SpringPage } from 'types/vendor/spring';
 import { BASE_URL } from 'util/requests';
 import CardLoader from './CardLoader';
 import './styles.css';

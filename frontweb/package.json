@@ -20,7 +20,7 @@
     "jwt-decode": "^3.1.2",
     "msw": "^0.33.2",
     "node-sass": "4.14.1",
-    "qs": "^6.10.1",
+    "qs": "^6.10.3",
     "react": "^17.0.2",
     "react-content-loader": "^6.2.0",
     "react-currency-input-field": "^3.4.2",
