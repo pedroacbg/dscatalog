@@ -1,12 +1,13 @@
 import { Redirect, Route } from 'react-router-dom';
-import { isAuthenticated } from 'util/requests';
+import { hasAnyRoles, isAuthenticated, Role } from 'util/requests';
 
 type Props = {
   children: React.ReactNode;
   path: string;
+  roles?: Role[];
 };
 
-const PrivateRoute = ({ children, path }: Props) => {
+const PrivateRoute = ({ children, path, roles = [] }: Props) => {
   return (
     <Route
       path={path}
@@ -18,6 +19,8 @@ const PrivateRoute = ({ children, path }: Props) => {
               state: { from: location },
             }}
           />
+        ) : !hasAnyRoles(roles) ? (
+          <Redirect to="/admin/products" />
         ) : (
           <>{children}</>
         )
